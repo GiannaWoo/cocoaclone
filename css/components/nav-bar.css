@@ -18,18 +18,9 @@
 }
 
 .nav__notification {
-  background-color: tomato;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
   position: absolute;
   left: 15px;
   bottom: 15px;
-  font-size: 10px;
 }
 
 .nav__ellipsis {
