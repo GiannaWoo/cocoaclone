@@ -29,14 +29,144 @@
   padding: 15px;
   border-radius: 20px;
   font-size: 14px;
+  margin-bottom: 25px;
 }
 
 .message-row {
+  width: 100%;
   display: flex;
-  align-items: center;
 }
 
 .message-row img {
   width: 50px;
   height: 50px;
+  border-radius: 35%;
+  margin-right: 10px;
+}
+
+.message__author {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  border-radius: 15px;
+  border-top-left-radius: 3px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.message__info {
+  display: flex;
+  align-items: end;
+}
+
+.message-out__time,
+.message__author,
+.message__time {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.message-out {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.message-out__info {
+  display: flex;
+  align-items: end;
+}
+
+.message-out__bubble {
+  background-color: var(--yellow);
+  padding: 13px;
+  border-radius: 15px;
+  border-top-right-radius: 3px;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+}
+
+.reply input {
+  height: 30px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.reply__column {
+  position: relative;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -3px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  animation: hideSplashScreen 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
